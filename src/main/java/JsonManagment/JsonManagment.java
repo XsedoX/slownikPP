@@ -28,4 +28,10 @@ public class JsonManagment implements IJsonManagment {
             return false;
         }
     }
+
+    @Override
+    public Dictionary desarializeDict(String filePath) throws IOException
+    {
+        return mapper.readValue(new File("src/main/Dictionaries/" + filePath), Dictionary.class);
+    }
 }

@@ -1,10 +1,11 @@
 package Dictionary;
 
 import java.util.List;
+import java.util.Set;
 
 public class DictionaryBuilder implements IDictionaryBuilder {
 
-    private List<String> words;
+    private Set<String> words;
     private String lang;
 
     @Override
@@ -21,7 +22,7 @@ public class DictionaryBuilder implements IDictionaryBuilder {
     }
 
     @Override
-    public IDictionaryBuilder wordsList(List<String> words)
+    public IDictionaryBuilder wordsList(Set<String> words)
     {
         this.words = words;
         return this;
